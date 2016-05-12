@@ -82,7 +82,11 @@ angular.module('fileCreator').controller('partNumberSearch', ['$scope', 'Upload'
             headers: {
                 'Content-Type': undefined
             }
-        }).success(function (data) {
+        }).
+
+
+        success(function (data) {
+            console.log(data);
             var blob = new Blob([data], {type: "attachment;application/x-zip-compressed"});
             var fileDownload = angular.element('<a></a>');
             var fileName = data.fileName;
